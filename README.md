@@ -1,40 +1,13 @@
-# p2p-platform
+# p2p platform // chatbot
 
-## django messaging platform
+## Change of Focus for the Project
+The main purpose of this project is to build a fullstack template for replicable web applications and web pages for reselling the layout/template to businesses. The implication is that the customer would implement Chatbot and AI functions into their website.
 
-After switching from te p2p-messaging repo to this one I decided to start from scratch and take a more modular approach.
-In changing my approach I decided it would be best to start with the messaging application itself and move to the more
-social aspects at a later time (profile, pfp's, and the like). 
+## Chatbot Specs
+The frontend chat function was made using WebSocket, JavaScript, Daphne channels, and Twisted. I didn't include the static files, which contain the JavaScript and CSS needed for rendering the chat function in a user-friendly way. The chatbot has been built upon OpenAI's 3.5 ChatGPT Turbo using an API key.
 
-## Future Plans 
+## Backend
+The backend for this web application is based on a PostgreSQL database using Docker, with the only consumer model being the chat consumer.
 
-The hopes for this project is to be able to turn the chat function into a potential chat bot for improved patient/provider
-relations in the field of healthcare. Furthermore the ultimate goal for this project is to be able to make a NLP, ML algorithm 
-that can take input from a provider and output the relevant documentation in regards to the patient interaction.
-
-## Potential Real-World Applications
-I still havent fully realized the exact capacity that this type of application could be applied to. 
-I have a semblance of the potential applications but they are still very nuanaced with the main focus just being on the messaging and documentation 
-capabilities rather than the interpolation of the two at a later date.
-
-I am still undecided if the NLP HIPPA compliant documenting application should be entirely separate from the messenging application.
-
-## Files of note
-
-docker-compose.yml
-chat/consumers.py
-chat/routing.py
-messenger/settings.py 
-requirements.txt
-
-## Projects Current State
-
-The current state of the project is in its infancy, with only te messaging application be built so far. 
-
-The next update will come in the form of refining the messaging functionality, and storing the messages in the postgres db.
-
-## Replication 
-
-I have intentionally set this project up to be replicatable, mainly for myself. 
-Anyone with intentions to replicate should refer to the requirements.txt file
-
+## Future Plans
+Plans moving forward with this application include storing the messages themselves in the database and training the chatbot on a specific set of data.
